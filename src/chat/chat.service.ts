@@ -119,7 +119,7 @@ export class ChatService {
     }
   }
 
-  async createMessage(messageData: MessageData): Promise<void | Message> {
+  async createMessage(messageData: MessageData): Promise<void | Message> {    
     try {
       if (messageData.postId) {
         const message: Message = await this.prisma.message.create({
